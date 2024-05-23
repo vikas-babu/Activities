@@ -1,0 +1,1 @@
+savedcmd_/root/LDD_Batch/vikas/may20/task1/mem_my_device.mod := printf '%s\n'   mem_my_device.o | awk '!x[$$0]++ { print("/root/LDD_Batch/vikas/may20/task1/"$$0) }' > /root/LDD_Batch/vikas/may20/task1/mem_my_device.mod

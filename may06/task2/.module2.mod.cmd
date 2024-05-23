@@ -1,0 +1,1 @@
+savedcmd_/root/LDD_Batch/vikas/may06/task2/module2.mod := printf '%s\n'   module2.o | awk '!x[$$0]++ { print("/root/LDD_Batch/vikas/may06/task2/"$$0) }' > /root/LDD_Batch/vikas/may06/task2/module2.mod

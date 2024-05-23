@@ -1,0 +1,1 @@
+savedcmd_/root/LDD_Batch/vikas/may07/task1/reverse_string.mod := printf '%s\n'   reverse_string.o | awk '!x[$$0]++ { print("/root/LDD_Batch/vikas/may07/task1/"$$0) }' > /root/LDD_Batch/vikas/may07/task1/reverse_string.mod

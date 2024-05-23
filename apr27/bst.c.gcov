@@ -1,0 +1,57 @@
+        -:    0:Source:bst.c
+        -:    0:Graph:bstr-bst.gcno
+        -:    0:Data:bstr-bst.gcda
+        -:    0:Runs:1
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include "bst.h"
+        -:    4:
+        -:    5:// Function to create a new node
+        7:    6:struct node* createNode(int data) {
+        7:    7:    struct node* newNode = (struct node*)malloc(sizeof(struct node));//we are allocating memory to newnode dynamically  using malloc
+        7:    8:    if (newNode == NULL) {
+    #####:    9:        printf("Memory allocation failed\n");
+    #####:   10:        exit(1);
+        -:   11:    }
+        7:   12:    newNode->data = data;
+        7:   13:    newNode->left = NULL;
+        7:   14:    newNode->right = NULL;
+        7:   15:    return newNode;
+        -:   16:}
+        -:   17:
+        -:   18:// Function to insert a new node with given data into BST
+       18:   19:struct node* insert(struct node* root, int data) {
+       18:   20:    if (root == NULL) {
+        7:   21:        return createNode(data);
+        -:   22:    }
+       11:   23:    if (data < root->data) {
+        7:   24:        root->left = insert(root->left, data);
+        4:   25:    } else if (data > root->data) {
+        4:   26:        root->right = insert(root->right, data);
+        -:   27:    }
+       11:   28:    return root;
+        -:   29:}
+        -:   30:
+        -:   31:// Function to search for a node with given data in BST
+        7:   32:int search(struct node* root, int data) {
+        7:   33:    if (root == NULL) {
+        1:   34:        return 0;
+        -:   35:    }
+        6:   36:    if (root->data == data) {
+        1:   37:        return 1;
+        -:   38:    }
+        5:   39:    if (data < root->data) {
+        2:   40:        return search(root->left, data);
+        -:   41:    } else {
+        3:   42:        return search(root->right, data);
+        -:   43:    }
+        -:   44:}
+        -:   45:
+        -:   46:// Function to perform in-order traversal of BST
+       15:   47:void inorderTraversal(struct node* root) {
+       15:   48:    if (root != NULL) {
+        7:   49:        inorderTraversal(root->left);
+        7:   50:        printf("%d ", root->data);
+        7:   51:        inorderTraversal(root->right);
+        -:   52:    }
+       15:   53:}

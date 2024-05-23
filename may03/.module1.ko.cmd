@@ -1,0 +1,1 @@
+savedcmd_/root/LDD_Batch/vikas/may03/module1.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /root/LDD_Batch/vikas/may03/module1.ko /root/LDD_Batch/vikas/may03/module1.o /root/LDD_Batch/vikas/may03/module1.mod.o;  make -f ./arch/x86/Makefile.postlink /root/LDD_Batch/vikas/may03/module1.ko

@@ -1,0 +1,1 @@
+savedcmd_/root/LDD_Batch/vikas/may07/task2/double_integer.mod := printf '%s\n'   double_integer.o | awk '!x[$$0]++ { print("/root/LDD_Batch/vikas/may07/task2/"$$0) }' > /root/LDD_Batch/vikas/may07/task2/double_integer.mod

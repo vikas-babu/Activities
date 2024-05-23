@@ -1,0 +1,1 @@
+savedcmd_/root/LDD_Batch/vikas/may16/task1/data_transfer.mod := printf '%s\n'   data_transfer.o | awk '!x[$$0]++ { print("/root/LDD_Batch/vikas/may16/task1/"$$0) }' > /root/LDD_Batch/vikas/may16/task1/data_transfer.mod

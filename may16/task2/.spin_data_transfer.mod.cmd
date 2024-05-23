@@ -1,0 +1,1 @@
+savedcmd_/root/LDD_Batch/vikas/may16/task2/spin_data_transfer.mod := printf '%s\n'   spin_data_transfer.o | awk '!x[$$0]++ { print("/root/LDD_Batch/vikas/may16/task2/"$$0) }' > /root/LDD_Batch/vikas/may16/task2/spin_data_transfer.mod

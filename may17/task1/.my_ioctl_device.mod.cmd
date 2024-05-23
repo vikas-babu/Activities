@@ -1,0 +1,1 @@
+savedcmd_/root/LDD_Batch/vikas/may17/task1/my_ioctl_device.mod := printf '%s\n'   my_ioctl_device.o | awk '!x[$$0]++ { print("/root/LDD_Batch/vikas/may17/task1/"$$0) }' > /root/LDD_Batch/vikas/may17/task1/my_ioctl_device.mod

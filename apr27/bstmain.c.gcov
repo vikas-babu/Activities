@@ -1,0 +1,41 @@
+        -:    0:Source:bstmain.c
+        -:    0:Graph:bstr-bstmain.gcno
+        -:    0:Data:bstr-bstmain.gcda
+        -:    0:Runs:1
+        -:    1:#include <stdio.h>
+        -:    2:#include "bst.h"
+        -:    3:
+        1:    4:int main() {
+        1:    5:    struct node* root = NULL;
+        -:    6:
+        -:    7:    // Insert some elements into the BST
+        1:    8:    root = insert(root, 100);
+        1:    9:    root = insert(root, 67);
+        1:   10:    root = insert(root, 45);
+        1:   11:    root = insert(root, 145);
+        1:   12:    root = insert(root, 137);
+        1:   13:    root = insert(root, 89);
+        1:   14:    root = insert(root, 119);
+        -:   15:
+        -:   16:    // Print the inorder traversal of the BST
+        1:   17:    printf("Inorder traversal of BST: ");
+        1:   18:    inorderTraversal(root);
+        1:   19:    printf("\n");
+        -:   20:
+        -:   21:    // Search for elements in the BST
+        1:   22:    int searchKey = 119;
+        1:   23:    if (search(root, searchKey)) {
+        1:   24:        printf("%d found in the BST.\n", searchKey);
+        -:   25:    } else {
+    #####:   26:        printf("%d not found in the BST.\n", searchKey);
+        -:   27:    }
+        -:   28:
+        1:   29:    searchKey = 188;
+        1:   30:    if (search(root, searchKey)) {
+    #####:   31:        printf("%d found in the BST.\n", searchKey);
+        -:   32:    } else {
+        1:   33:        printf("%d not found in the BST.\n", searchKey);
+        -:   34:    }
+        -:   35:
+        1:   36:    return 0;
+        -:   37:}
